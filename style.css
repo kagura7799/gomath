@@ -23,6 +23,10 @@ body {
     font-size: 40px;
 }
 
+.select-difficulty {
+    display: block;
+}
+
 .btn-difficulty {
     cursor: pointer;
     transition: all 0.8s ease;
@@ -51,7 +55,6 @@ body {
     background-color: rgb(241, 184, 76);
 }
 
-
 #hard-btn {
     border: 2px solid rgb(241, 107, 107);
 }
@@ -59,8 +62,6 @@ body {
 #hard-btn:hover {
     background-color: rgb(229, 130, 130);
 }
-
-
 
 .screen {
     background-color: aliceblue;
@@ -93,7 +94,7 @@ body {
     outline: none;
 }
 
-.btn-answer {
+.btn-answer, .btn-answer2  {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -107,11 +108,57 @@ body {
     margin-bottom: 50px;
 }
 
-.btn-answer:hover {
+.btn-answer:hover, .btn-answer2:hover {
     background-color: rgb(146, 200, 91);
 }
 
-.btn-answer b {
+.btn-answer b, .btn-answer2 b{
     font-size: 20px;
     padding-right: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.result-window {
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: 3px solid black;
+    display: none;
+}
+
+.describe-result h2 {
+    margin-top: 120px;
+    margin-left: 180px;
+    margin-right: 300px;
+}
+
+.true-res, .false-res {
+    display: none;
+}
+
+.count-true-examples {
+    color: #55a901;
+    font-size: 45px;
+    width: 10%;
+    margin-left: 320px;
+}
+
+.btn-answer2 {
+    margin-left: 240px;
+}
+
+.count-true-examples2 {
+    color: red;
+    font-size: 45px;
+    width: 10%;
+    margin-left: 320px;
+}
+
+.false-h2 {
+    width: 350px;
 }

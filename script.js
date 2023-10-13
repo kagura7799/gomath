@@ -6,6 +6,12 @@ const playScreen = document.querySelector('.screen')
 const example = document.querySelector('.example')
 const answerInput = document.querySelector('.answer')
 const sendBtn =  document.querySelector('.btn-answer')
+const trueWindow = document.querySelector('.true-res')
+const falseWindow = document.querySelector('.false-res')
+const trueExamples = document.querySelector('.count-true-examples')
+const trueExamples2 = document.querySelector('.count-true-examples2')
+const descRes = document.querySelector('.result-window')
+// const trueFlex = document.querySelector('.true-flex')
 
 const easyExamples = [
  {
@@ -57,10 +63,7 @@ const easyExamples = [
 
 let countRightsAnswers = 0
 
-easyBtn.onclick = () => {
-    changeModeMenu.style.display = 'none'
-    playScreen.style.display = 'block'
-
+function computeExamples() {
     let countPlace = 0
 
     sendBtn.onclick = () => {
@@ -68,14 +71,33 @@ easyBtn.onclick = () => {
             countRightsAnswers++
         }
         countPlace++
+        console.log(countPlace)
         example.textContent = easyExamples[countPlace].example
         answerInput.value = ''
 
-        if (countPlace === 8) {
+        if (countPlace === 7) {
+            if (countRightsAnswers >= 4) {
+                playScreen.style.display = 'none'
+                descRes.style.display = 'block'
+                trueWindow.style.display = 'flex'
+                trueExamples.textContent = countRightsAnswers
+            }
 
+            else {
+                playScreen.style.display = 'none'
+                descRes.style.display = 'block'
+                falseWindow.style.display = 'flex'
+                trueExamples2.textContent = countRightsAnswers
+            }
         }
     }
     example.textContent = easyExamples[countPlace].example
+}
+
+easyBtn.onclick = () => {
+    changeModeMenu.style.display = 'none'
+    playScreen.style.display = 'block'
+    computeExamples()
 }
 
 normalBtn.onclick = () => {
