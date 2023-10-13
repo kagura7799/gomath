@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-logo {
+    pointer-events: none;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.content {
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.change-difficulty {
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+
+.btn-difficulty {
+    cursor: pointer;
+    transition: all 0.8s ease;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: aliceblue;
+}
+
+#easy-btn {
+    border: 2px solid greenyellow;
+    
+}
+
+#easy-btn:hover {
+    background-color: rgb(195, 235, 136);
+}
+
+
+#normal-btn {
+    border: 2px solid orange;
+}
+
+#normal-btn:hover {
+    background-color: rgb(241, 184, 76);
+}
+
+
+#hard-btn {
+    border: 2px solid rgb(241, 107, 107);
+}
+
+#hard-btn:hover {
+    background-color: rgb(229, 130, 130);
+}
+
+
+
+.screen {
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: 3px solid black;
+    display: none;
+}
+
+.screen p {
+    font-size: 45px;
+}
+
+.flex-form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.answer {
+    margin-top: 65px;
+    margin-bottom: auto;
+    height: 25px;
+    width: 50px;
+    font-size: 30px;
+}
+
+.answer:focus {
+    outline: none;
+}
+
+.btn-answer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 2px solid rgb(146, 200, 91);
+    padding: 10px;
+    transition: all 0.8s ease;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.btn-answer:hover {
+    background-color: rgb(146, 200, 91);
+}
+
+.btn-answer b {
+    font-size: 20px;
+    padding-right: 5px;
+}
